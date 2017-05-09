@@ -71,24 +71,28 @@
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
             this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.categoriaToolStripMenuItem.Text = "Categorias";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
             // filmesESériesToolStripMenuItem
             // 
             this.filmesESériesToolStripMenuItem.Name = "filmesESériesToolStripMenuItem";
             this.filmesESériesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.filmesESériesToolStripMenuItem.Text = "Filmes e Séries";
+            this.filmesESériesToolStripMenuItem.Click += new System.EventHandler(this.filmesESériesToolStripMenuItem_Click);
             // 
             // gêneroToolStripMenuItem
             // 
             this.gêneroToolStripMenuItem.Name = "gêneroToolStripMenuItem";
             this.gêneroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gêneroToolStripMenuItem.Text = "Gênero";
+            this.gêneroToolStripMenuItem.Click += new System.EventHandler(this.gêneroToolStripMenuItem_Click);
             // 
             // artistasToolStripMenuItem
             // 
             this.artistasToolStripMenuItem.Name = "artistasToolStripMenuItem";
             this.artistasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.artistasToolStripMenuItem.Text = "Artistas";
+            this.artistasToolStripMenuItem.Click += new System.EventHandler(this.artistasToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
