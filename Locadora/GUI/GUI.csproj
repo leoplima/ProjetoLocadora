@@ -69,11 +69,6 @@
     <Compile Include="frmItem.Designer.cs">
       <DependentUpon>frmItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="LocadoraWebDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LocadoraWebDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,17 +101,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="LocadoraWebDataSet.xsc">
-      <DependentUpon>LocadoraWebDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="LocadoraWebDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LocadoraWebDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LocadoraWebDataSet.xss">
-      <DependentUpon>LocadoraWebDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,6 +113,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{5fd69501-8979-47c5-b9e7-4a0142ee7bf5}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{8ca1f375-67e5-43b9-9394-5035d5c19350}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

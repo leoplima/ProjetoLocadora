@@ -22,6 +22,7 @@ namespace GUI
             frmCategoria tela = new frmCategoria();
             tela.MdiParent = this;
             tela.Show();
+            
         }
 
         private void filmesESériesToolStripMenuItem_Click(object sender, EventArgs e)

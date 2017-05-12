@@ -30,11 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmesESériesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gêneroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.artistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,12 +59,6 @@
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
-            // 
-            // relatórioToolStripMenuItem
-            // 
-            this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
-            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.relatórioToolStripMenuItem.Text = "Relatório";
             // 
             // categoriaToolStripMenuItem
             // 
@@ -94,12 +88,19 @@
             this.artistasToolStripMenuItem.Text = "Artistas";
             this.artistasToolStripMenuItem.Click += new System.EventHandler(this.artistasToolStripMenuItem_Click);
             // 
+            // relatórioToolStripMenuItem
+            // 
+            this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
+            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.relatórioToolStripMenuItem.Text = "Relatório";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 363);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
             this.Text = "Principal";
