@@ -34,8 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
@@ -100,19 +100,19 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Nome";
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(48, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtCodigo.Location = new System.Drawing.Point(59, 60);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(48, 20);
+            this.txtCodigo.TabIndex = 6;
             // 
-            // textBox2
+            // txtNome
             // 
-            this.textBox2.Location = new System.Drawing.Point(59, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtNome.Location = new System.Drawing.Point(59, 94);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(208, 20);
+            this.txtNome.TabIndex = 7;
             // 
             // dataGridView1
             // 
@@ -150,8 +150,8 @@
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -175,8 +175,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnAtualizar;

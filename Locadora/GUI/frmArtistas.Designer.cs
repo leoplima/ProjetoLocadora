@@ -38,12 +38,12 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtPais = new System.Windows.Forms.TextBox();
-            this.txtDataNasc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.btnInserir.TabIndex = 1;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnAtualizar
             // 
@@ -83,6 +84,7 @@
             this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // label1
             // 
@@ -133,13 +135,6 @@
             this.txtPais.Size = new System.Drawing.Size(100, 20);
             this.txtPais.TabIndex = 10;
             // 
-            // txtDataNasc
-            // 
-            this.txtDataNasc.Location = new System.Drawing.Point(72, 127);
-            this.txtDataNasc.Name = "txtDataNasc";
-            this.txtDataNasc.Size = new System.Drawing.Size(100, 20);
-            this.txtDataNasc.TabIndex = 9;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -183,18 +178,26 @@
             this.dataGridView1.Size = new System.Drawing.Size(440, 99);
             this.dataGridView1.TabIndex = 15;
             // 
+            // dtpData
+            // 
+            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpData.Location = new System.Drawing.Point(72, 127);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(88, 20);
+            this.dtpData.TabIndex = 16;
+            // 
             // frmArtistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 346);
+            this.Controls.Add(this.dtpData);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPais);
-            this.Controls.Add(this.txtDataNasc);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label3);
@@ -225,11 +228,11 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtPais;
-        private System.Windows.Forms.TextBox txtDataNasc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dtpData;
     }
 }

@@ -29,7 +29,7 @@ namespace GUI
         private void btnInserir_Click(object sender, EventArgs e)
         {
             Categoria cat = new Categoria();
-            cat.Nome = textBox2.Text;
+            cat.Nome = txtNome.Text;
 
             CategoriaDAL catDAL = new CategoriaDAL();
             catDAL.InserirCategoria(cat);
@@ -60,7 +60,7 @@ namespace GUI
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            int codigo = Convert.ToInt32(textBox1.Text);
+            int codigo = Convert.ToInt32(txtCodigo.Text);
 
             CategoriaDAL catDAL = new CategoriaDAL();
 
@@ -73,7 +73,7 @@ namespace GUI
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            int codigo = Convert.ToInt32(textBox1.Text);
+            int codigo = Convert.ToInt32(txtCodigo.Text);
 
             CategoriaDAL catDAL = new CategoriaDAL();
 
@@ -85,7 +85,7 @@ namespace GUI
             }
             else
             {
-                textBox2.Text = cat.Nome;
+                txtNome.Text = cat.Nome;
 
 
             }
@@ -93,8 +93,8 @@ namespace GUI
 
         private void LimpasCampos()
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
+            txtCodigo.Text = "";
+            txtNome.Text = "";
         }
     }
 }
