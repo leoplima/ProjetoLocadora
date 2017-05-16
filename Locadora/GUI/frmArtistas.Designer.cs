@@ -44,6 +44,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtFoto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +58,7 @@
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnInserir
             // 
@@ -75,6 +78,7 @@
             this.btnAtualizar.TabIndex = 2;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnExcluir
             // 
@@ -155,9 +159,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(350, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(123, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
@@ -169,13 +175,14 @@
             this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(15, 239);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(440, 99);
+            this.dataGridView1.Size = new System.Drawing.Size(440, 108);
             this.dataGridView1.TabIndex = 15;
             // 
             // dtpData
@@ -186,11 +193,26 @@
             this.dtpData.Size = new System.Drawing.Size(88, 20);
             this.dtpData.TabIndex = 16;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // txtFoto
+            // 
+            this.txtFoto.Location = new System.Drawing.Point(350, 172);
+            this.txtFoto.Name = "txtFoto";
+            this.txtFoto.Size = new System.Drawing.Size(123, 23);
+            this.txtFoto.TabIndex = 17;
+            this.txtFoto.Text = "Procurar Foto";
+            this.txtFoto.UseVisualStyleBackColor = true;
+            this.txtFoto.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmArtistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 346);
+            this.ClientSize = new System.Drawing.Size(504, 353);
+            this.Controls.Add(this.txtFoto);
             this.Controls.Add(this.dtpData);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCancelar);
@@ -209,6 +231,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Name = "frmArtistas";
             this.Text = "Cadastro de Artistas";
+            this.Load += new System.EventHandler(this.frmArtistas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -234,5 +257,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button txtFoto;
     }
 }

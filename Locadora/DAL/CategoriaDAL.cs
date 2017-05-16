@@ -48,7 +48,7 @@ namespace DAL
             {
                 conn.Open();
 
-                string sql = @"UPDATE Categoria SET Codigo=@codigo, Nome=@nome,
+                string sql = @"UPDATE Categoria SET Nome=@nome
                                 WHERE Codigo=@codigo";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@codigo", c.Codigo);

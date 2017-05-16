@@ -12,7 +12,7 @@ namespace DAL
     {
         string connectionString = "Data Source=.\\SQLEXPRESS; Initial Catalog=LocadoraWeb; User Id=sa ; Password=lima0878";
 
-        public void InserirCategoria(Artista a)
+        public void InserirArtista(Artista a)
         {
             SqlConnection conn = new SqlConnection(connectionString);
 
@@ -51,7 +51,7 @@ namespace DAL
             {
                 conn.Open();
 
-                string sql = @"UPDATE Artista SET Codigo=@codigo, Nome=@nome,DataNasc=@dtNasc, Foto=@foto,
+                string sql = @"UPDATE Artista SET Codigo=@codigo, Nome=@nome,DataNasc=@dtNasc, Foto1=@foto,
                                 WHERE Codigo=@codigo";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@nome", a.Nome);
@@ -93,11 +93,11 @@ namespace DAL
                     while (dr.Read())
                     {
                         a = new Artista();
-                        c.Codigo = Convert.ToInt32(dr["Codigo"]);
+                        a.Codigo = Convert.ToInt32(dr["Codigo"]);
                         a.Nome = dr["Nome"].ToString();
-                        a.DataNasc = Convert.ToDateTime(dr["DataNasc"]);
+                        a.DataNasc = dr["DataNasc"].ToString();
                         a.Pais = dr["Pais"].ToString();
-                        a.Foto = dr["Foto"].ToString();
+                        a.Foto = dr["Foto1"].ToString();
 
                         lista.Add(a);
                     }
@@ -163,9 +163,9 @@ namespace DAL
                     a = new Artista();
                     a.Codigo = codigo;
                     a.Nome = dr["Nome"].ToString();
-                    a.DataNasc = Convert.ToDateTime(dr["DataNasc"]);
+                    a.DataNasc = dr["DataNasc"].ToString();
                     a.Pais = dr["Pais"].ToString();
-                    a.Foto = dr["Foto"].ToString();
+                    a.Foto = dr["Foto1"].ToString();
 
                 }
             }

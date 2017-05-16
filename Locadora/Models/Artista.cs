@@ -10,7 +10,7 @@ namespace Models
     {
         public int Codigo { get; set; }
         public string Nome { get; set; }
-        public DateTime DataNasc { get; set; }
+        public string DataNasc { get; set; }
         public string Pais { get; set; }
         public string Foto { get; set; }
     }

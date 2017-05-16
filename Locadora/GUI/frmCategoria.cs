@@ -37,13 +37,13 @@ namespace GUI
             MessageBox.Show("Categoria cadastrada com Sucesso!");
             
             CarregarCategorias();
-            LimpasCampos();
+            LimparCampos();
 
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            LimpasCampos();
+            LimparCampos();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -68,7 +68,7 @@ namespace GUI
 
             catDAL.ExcluirCategoria(codigo);
             CarregarCategorias();
-            LimpasCampos();
+            LimparCampos();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -91,10 +91,26 @@ namespace GUI
             }
         }
 
-        private void LimpasCampos()
+        private void LimparCampos()
         {
             txtCodigo.Text = "";
             txtNome.Text = "";
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            Categoria cat = new Categoria();
+            cat.Codigo = Convert.ToInt32(txtCodigo.Text);
+            cat.Nome = txtNome.Text;
+            
+            CategoriaDAL catDAL = new CategoriaDAL();
+            catDAL.AtualizarCategoria(cat);
+
+            LimparCampos();
+
+            CarregarCategorias();
+
+            MessageBox.Show("Categoria atualizada com sucesso!");
         }
     }
 }
