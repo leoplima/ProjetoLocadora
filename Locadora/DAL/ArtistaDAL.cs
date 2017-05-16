@@ -51,9 +51,10 @@ namespace DAL
             {
                 conn.Open();
 
-                string sql = @"UPDATE Artista SET Codigo=@codigo, Nome=@nome,DtNasc=@dtNasc, Foto1=@foto,
+                string sql = @"UPDATE Artista SET Nome=@nome,DtNasc=@dtNasc,Pais=@pais,Foto1=@foto
                                 WHERE Codigo=@codigo";
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@codigo", a.Codigo);
                 cmd.Parameters.AddWithValue("@nome", a.Nome);
                 cmd.Parameters.AddWithValue("@dtNasc", a.DataNasc);
                 cmd.Parameters.AddWithValue("@pais", a.Pais);

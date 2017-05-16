@@ -60,7 +60,7 @@ namespace DAL
             {
                 conn.Open();
 
-                string sql = @"UPDATE Item SET Codigo=@codigo, CodBarras=@cod_b,CodCategoria=@cod_cat,Titulo=@titulo,CodGenero=@cod_gen,Ano=@ano,CodTipo=@cod_tipo,Preco=@preco,Data=@data,VrCusto=@vr_custo,CodSituacao=@cod_sit, CodArtita=@cod_art,Diretor=@diretor,Foto=@foto,
+                string sql = @"UPDATE Item SET Codigo=@codigo, CodBarras=@cod_b,CodCategoria=@cod_cat,Titulo=@titulo,CodGenero=@cod_gen,Ano=@ano,CodTipo=@cod_tipo,Preco=@preco,Data=@data,VrCusto=@vr_custo,CodSituacao=@cod_sit, CodArtita=@cod_art,Diretor=@diretor,Foto1=@foto
                                 WHERE Codigo=@codigo";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@codigo", i.Codigo);
@@ -125,7 +125,7 @@ namespace DAL
                         i.CodSituacao = Convert.ToInt32(dr["CodSituacao"]);
                         i.CodArtista = Convert.ToInt32(dr["CodArtista"]);
                         i.Diretor = dr["Diretor"].ToString();
-                        i.Foto = dr["Foto"].ToString();
+                        i.Foto = dr["Foto1"].ToString();
 
                         lista.Add(i);
                     }
@@ -202,7 +202,7 @@ namespace DAL
                     item.CodSituacao = Convert.ToInt32(dr["CodSituacao"]);
                     item.CodArtista = Convert.ToInt32(dr["CodArtista"]);
                     item.Diretor = dr["Diretor"].ToString();
-                    item.Foto = dr["Foto"].ToString();
+                    item.Foto = dr["Foto1"].ToString();
 
                 }
             }
