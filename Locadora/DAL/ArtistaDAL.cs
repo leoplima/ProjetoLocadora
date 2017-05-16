@@ -51,7 +51,7 @@ namespace DAL
             {
                 conn.Open();
 
-                string sql = @"UPDATE Artista SET Codigo=@codigo, Nome=@nome,DataNasc=@dtNasc, Foto1=@foto,
+                string sql = @"UPDATE Artista SET Codigo=@codigo, Nome=@nome,DtNasc=@dtNasc, Foto1=@foto,
                                 WHERE Codigo=@codigo";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@nome", a.Nome);
@@ -95,7 +95,7 @@ namespace DAL
                         a = new Artista();
                         a.Codigo = Convert.ToInt32(dr["Codigo"]);
                         a.Nome = dr["Nome"].ToString();
-                        a.DataNasc = dr["DataNasc"].ToString();
+                        a.DataNasc = Convert.ToDateTime(dr["DtNasc"]);
                         a.Pais = dr["Pais"].ToString();
                         a.Foto = dr["Foto1"].ToString();
 
@@ -163,7 +163,7 @@ namespace DAL
                     a = new Artista();
                     a.Codigo = codigo;
                     a.Nome = dr["Nome"].ToString();
-                    a.DataNasc = dr["DataNasc"].ToString();
+                    a.DataNasc = Convert.ToDateTime(dr["DtNasc"]);
                     a.Pais = dr["Pais"].ToString();
                     a.Foto = dr["Foto1"].ToString();
 

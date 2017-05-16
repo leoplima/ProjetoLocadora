@@ -36,6 +36,10 @@ namespace GUI
         {
             txtCodigo.Text = "";
             txtNome.Text = "";
+            txtPais.Text = "";
+            pictureBox1.ImageLocation = "";
+            dtpData.Text = "";
+            
         }
 
 
@@ -43,7 +47,7 @@ namespace GUI
         {
             Artista art = new Artista();
             art.Nome = txtNome.Text;
-            art.DataNasc = dtpData.Value.ToString();
+            art.DataNasc = dtpData.Value;
             art.Pais = txtPais.Text;
             art.Foto = pictureBox1.ImageLocation;
 
@@ -93,7 +97,7 @@ namespace GUI
             Artista art = new Artista();
             art.Codigo = Convert.ToInt32(txtCodigo.Text);
             art.Nome = txtNome.Text;
-            art.DataNasc = dtpData.Value.ToString();
+            art.DataNasc = dtpData.Value;
             art.Pais = txtPais.Text;
             art.Foto = pictureBox1.ImageLocation.ToString();
 
